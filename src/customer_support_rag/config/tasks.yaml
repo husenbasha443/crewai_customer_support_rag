@@ -1,0 +1,34 @@
+query_task:
+  description: >
+    Analyze the user query: {user_query}.
+    Identify intent and information needed.
+  expected_output: >
+    Query intent.
+  agent: query_agent
+
+
+retrieval_task:
+  description: >
+    Search the vector database for the query: {user_query}.
+    If no relevant data is found, mark as fallback.
+  expected_output: >
+    Retrieved context or fallback.
+  agent: retrieval_agent
+
+
+response_task:
+  description: >
+    Answer the query: {user_query}.
+    Use retrieved context if available.
+    Otherwise, use LLM fallback.
+  expected_output: >
+    Final customer answer.
+  agent: response_agent
+
+
+escalation_task:
+  description: >
+    Decide if escalation is required.
+  expected_output: >
+    Escalation decision.
+  agent: escalation_agent
