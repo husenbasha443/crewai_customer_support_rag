@@ -1,7 +1,7 @@
 [project]
 name = "rag-crew"
 version = "0.1.0"
-description = "Add your description here"
+description = "CREW AI Customer Support RAG Project Using CREW AI"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
